@@ -17,22 +17,27 @@ namespace WFNovo
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void btnVerCadastros_Click(object sender, EventArgs e)
         {
+            Cliente cliente = new Cliente();
+            cliente.nome = txtNome.Text;
+            cliente.endereco = txtEndereco.Text;
+            cliente.bairro = txtBairro.Text;
+            cliente.estado = txtEstado.Text;
+            cliente.telefone = txtEstado.Text;
+            cliente.celular = txtCelular.Text;
+            cliente.email = txtEmail.Text;
 
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            FrmVerCadastro frmVerCadastro = new FrmVerCadastro(cliente);
+            frmVerCadastro.ShowDialog();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
         }
